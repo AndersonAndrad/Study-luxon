@@ -1,10 +1,9 @@
-import * as dotenv from 'dotenv';
+import { UserEntity } from './user/user.entity';
 import { Module } from '@nestjs/common';
 import { AppController } from './app.controller';
 import { AppService } from './app.service';
 import { TypeOrmModule } from '@nestjs/typeorm';
-
-dotenv.config();
+import { UserModule } from './user/user.module';
 @Module({
   imports: [
     TypeOrmModule.forRoot({
@@ -14,9 +13,11 @@ dotenv.config();
       username: 'postgres',
       password: 'admin',
       database: 'luxon',
-      entities: [],
+      entities: [UserEntity],
       synchronize: true,
+      migrations: ['migrations/*.js'],
     }),
+    UserModule,
   ],
   controllers: [AppController],
   providers: [AppService],
