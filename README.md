@@ -36,6 +36,14 @@ This project was created to learn how to use luxon technology and improve my kno
 yarn install
 ```
 
+### If using docker for the database (postgres)
+
+```
+docker run --name nameYourDatabase -e POSTGRES_PASSWORD=yourPassword -p 5432:5432 -d postgres
+```
+
+*obs: the technologies that are in the package are only for mysql and postgres, if you have to use another one check the [documentation](https://docs.nestjs.com/techniques/database)*
+
 ### usage
 
 as a developer
