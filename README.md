@@ -66,6 +66,32 @@ yarn test
 
 -----------------------
 
+## Reminders for project evolution
+
+CLI to create model
+
+```
+nest g mo model_name
+```
+
+CLI to create controller
+
+```
+nest g controller model_name
+```
+
+CLI to create service
+
+```
+nest g service service_name
+```
+
+
+
+----------------------------
+
+
+
 ## 👤 Authors
 
 |                                                              |
