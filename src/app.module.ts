@@ -1,3 +1,4 @@
+import { GameEntity } from './games/games.entity';
 import { UserEntity } from './user/user.entity';
 import { Module } from '@nestjs/common';
 import { AppController } from './app.controller';
@@ -14,7 +15,7 @@ import { GamesModule } from './games/games.module';
       username: 'postgres',
       password: 'admin',
       database: 'luxon',
-      entities: [UserEntity],
+      entities: [UserEntity, GameEntity],
       synchronize: true,
       migrations: ['migrations/*.js'],
     }),
